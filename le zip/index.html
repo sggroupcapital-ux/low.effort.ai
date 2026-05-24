@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LOW EFFORT AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-2xl bg-zinc-900 rounded-3xl p-6 border border-zinc-800">
+  <h1 class="text-3xl font-bold mb-6">LOW EFFORT AI</h1>
+
+  <div class="space-y-4">
+    <input id="email" type="email" placeholder="Email"
+      class="w-full p-3 rounded-xl bg-zinc-800 outline-none">
+
+    <input id="password" type="password" placeholder="Password"
+      class="w-full p-3 rounded-xl bg-zinc-800 outline-none">
+
+    <div class="flex gap-3">
+      <button onclick="signup()"
+        class="flex-1 bg-white text-black rounded-xl p-3 font-bold">
+        Signup
+      </button>
+
+      <button onclick="login()"
+        class="flex-1 bg-cyan-400 text-black rounded-xl p-3 font-bold">
+        Login
+      </button>
+    </div>
+
+    <textarea id="prompt"
+      placeholder="Ask anything..."
+      class="w-full h-40 p-4 rounded-xl bg-zinc-800 outline-none"></textarea>
+
+    <button onclick="sendMessage()"
+      class="w-full bg-cyan-400 text-black rounded-xl p-3 font-bold">
+      Generate Response
+    </button>
+
+    <div id="output"
+      class="bg-zinc-800 rounded-xl p-4 whitespace-pre-wrap min-h-[120px]"></div>
+  </div>
+</div>
+
+<script type="module" src="./app.js"></script>
+
+</body>
+</html>
